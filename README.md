@@ -7,11 +7,11 @@
 | nickname            | string  | null: false |
 | email               | string  | null: false |
 | encrypted_password  | string  | null: false |
-| last-name           | string  | null: false |
-| first-name          | string  | null: false |
-| last-name-kana      | string  | null: false |
-| first-name-kana     | string  | null: false |
-| birth-date          | integer | null: false |
+| last_name           | string  | null: false |
+| first_name          | string  | null: false |
+| last_name_kana      | string  | null: false |
+| first_name_kana     | string  | null: false |
+| birth_date          | integer | null: false |
 
 ### Association
 
@@ -25,10 +25,10 @@
 | name                 | string     | null: false |
 | info                 | text       | null: false |
 | category             | string     | null: false |
-| sales-status         | string     | null: false |
-| shipping-fee-status  | string     | null: false |
+| sales_status         | string     | null: false |
+| shipping_fee_status  | string     | null: false |
 | prefecture           | string     | null: false |
-| scheduled-delivery   | string     | null: false |
+| scheduled_delivery   | string     | null: false |
 | price                | integer    | null: false |
 | user_id              | references | null: false, foreign_key: true |
 
@@ -42,16 +42,16 @@
 
 | Column         | Type       | Options     |
 | -------------- | ---------- | ----------- |
-| card-number    | integer    | null: false |
-| card-exp-month | integer    | null: false |
-| card-exp-year  | integer    | null: false |
-| card-cvc       | integer    | null: false |
-| postal-code    | integer    | null: false |
+| card_number    | integer    | null: false |
+| card_exp_month | integer    | null: false |
+| card_exp_year  | integer    | null: false |
+| card_cvc       | integer    | null: false |
+| postal_code    | integer    | null: false |
 | prefecture     | string     | null: false |
 | city           | string     | null: false |
 | address        | string     | null: false |
 | building       | string     |             |
-| phone-number   | integer    | null: false |
+| phone_number   | integer    | null: false |
 | user_id        | references | null: false, foreign_key: true |
 
 ### Association
