@@ -17,6 +17,7 @@
 
 - has_many :items
 - has_many :orders
+- belongs_to :user_item
 
 ## items テーブル
 
@@ -37,6 +38,13 @@
 - belongs_to :user
 - has_one :order
 
+## user_item テーブル
+
+| user | references | null: false, foreign_key: true |
+| item | references | null: false, foreign_key: true |
+
+- belongs_to :user
+- belongs_to :item
 
 ## orders テーブル
 
@@ -54,3 +62,4 @@
 
 - belongs_to :user
 - belongs_to :item
+- belongs_to :user_item
