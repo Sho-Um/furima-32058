@@ -35,7 +35,7 @@
 ### Association
 
 - belongs_to :user
-- has_many :user_items
+- has_one :user_item
 
 ## user_item テーブル
 
