@@ -16,7 +16,6 @@
 ### Association
 
 - has_many :items
-- has_many :orders
 - belongs_to :user_item
 
 ## items テーブル
@@ -31,12 +30,11 @@
 | prefecture_id            | integer    | null: false |
 | scheduled_delivery_id    | integer    | null: false |
 | price                    | integer    | null: false |
-| user                     | references | null: false, foreign_key: true |
+| user_item                | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one :order
 
 ## user_item テーブル
 
@@ -57,10 +55,8 @@
 | address        | string     | null: false |
 | building       | string     |             |
 | phone_number   | string     | null: false |
-| user           | references | null: false, foreign_key: true |
+| user_item      | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :user
-- belongs_to :item
 - belongs_to :user_item
