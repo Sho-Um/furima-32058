@@ -1,4 +1,4 @@
-class Category < ApplicationRecord
+class Category < ActiveHash::Base
   self.data = [
     {id: 1, name: 'レディース'}, 
     {id: 2, name: 'メンズ'},
@@ -14,5 +14,5 @@ class Category < ApplicationRecord
 
   include ActiveHash::Associations
   has_many :items
-  
+
 end
