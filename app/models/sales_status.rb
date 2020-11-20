@@ -7,4 +7,8 @@ class SalesStatus < ApplicationRecord
     {id: 5, name: '傷や汚れあり'},
     {id: 6, name: '全体的に状態が悪い'}
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+  
 end
