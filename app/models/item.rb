@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :scheduled_delivery
 
-  validates :name, :info, :user_id, presence: true
+  validates :name, :info, :user_id, :image, presence: true
 
   VALID_PRICEL_HALF = /\A[0-9]+\z/.freeze
 
