@@ -21,6 +21,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @user_item = @item.user_item
   end
 
   def edit
