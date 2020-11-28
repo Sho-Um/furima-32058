@@ -59,5 +59,11 @@ RSpec.describe UserItemOrder, type: :model do
       @user_item_order.valid?
       expect(@user_item_order.errors.full_messages).to include("Phone number is invalid. Input half-width characters.")
     end
+    
+    it 'tokenが空だと保存できないこと' do
+      @user_item_order.token =  ""
+      @user_item_order.valid?
+      expect(@user_item_order.errors.full_messages).to include("Token can't be blank")
+    end
   end
 end
