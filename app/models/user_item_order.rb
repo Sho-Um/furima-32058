@@ -6,7 +6,7 @@ class UserItemOrder
   validates :prefecture_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }
   validates :city, presence: true
   validates :address, presence: true
-  validates :phone_number, presence: true, numericality: { only_integer: true, message: 'is invalid. Input half-width characters.' }
+  validates :phone_number, presence: true, length: { maximum: 11 }, numericality: { only_integer: true, message: 'is invalid. Input half-width characters.' }
   validates :token, presence: true
 
   def save
