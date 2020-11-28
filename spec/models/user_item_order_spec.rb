@@ -60,6 +60,12 @@ RSpec.describe UserItemOrder, type: :model do
       expect(@user_item_order.errors.full_messages).to include('Phone number is invalid. Input half-width characters.')
     end
 
+    it 'phone_numberが12桁以上だと登録できないこと' do
+      @user_item_order.phone_number = '123456789101'
+      @user_item_order.valid?
+      expect(@user_item_order.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)")
+    end
+
     it 'tokenが空だと保存できないこと' do
       @user_item_order.token = ''
       @user_item_order.valid?
