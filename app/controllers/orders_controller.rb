@@ -4,7 +4,11 @@ class OrdersController < ApplicationController
   before_action :move_to_index
 
   def index
-    @user_item_order = UserItemOrder.new
+    if @item.user_item.present?
+      redirect_to root_path
+    else 
+      @user_item_order = UserItemOrder.new
+    end
   end
 
   def create
